@@ -1,0 +1,37 @@
+//
+//  CommonDefine.pch
+//  WXMovie
+//
+//  Created by zhongzhongjun on 16/4/19.
+//  Copyright © 2016年 wxhl. All rights reserved.
+//
+
+#ifndef CommonDefine_pch
+#define CommonDefine_pch
+
+#import "UIViewExt.h"
+#define kScreenWidth [UIScreen mainScreen].bounds.size.width
+#define kScreenHeight [UIScreen mainScreen].bounds.size.height
+#define TabBarHeight 49
+#define NavigationBarHeight 64
+
+#define kMovieHeaderViewHeight 130 //首页海报视图顶部子视图的高度
+#define kMovieFooterViewHeight 40 //首页海报视图底部子视图的高度
+#define kMovieHeaderViewOffSet 100 //首页海报视图顶部子集合视图的高度
+
+enum NewsType{
+    kWordType,
+    kImageType,
+    kVideoType
+};
+
+#ifdef DEBUG
+#define debugLog(...) NSLog(@__VA_ARGS__)
+#define debugMethod() NSLog(@"%s", __func__)
+#else
+#define debugLog(...)
+#define debugMethod()
+#endif
+
+
+#endif /* CommonDefine_pch */
